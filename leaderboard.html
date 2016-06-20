@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body><script>
+var addTeamNames;
+var data = gameInfo();
+var gameInfo = function(){
+  return [
+   {
+     home_team: "Patriots",
+     away_team: "Broncos",
+     home_score: 7,
+     away_score: 3
+   },
+   {
+     home_team: "Broncos",
+     away_team: "Colts",
+     home_score: 3,
+     away_score: 0
+   },
+   {
+     home_team: "Patriots",
+     away_team: "Colts",
+     home_score: 11,
+     away_score: 7
+   },
+   {
+     home_team: "Steelers",
+     away_team: "Patriots",
+     home_score: 7,
+     away_score: 21
+   }
+ ]
+}
+
+function team(name, wins, losses) {
+  name = name;
+  rank = rank;
+  wins = wins;
+  losses = losses;
+  output = console.log("name: " + name + "wins: " + wins + "losses: " + losses);
+}
+
+function addTeamNames(data) {
+  var teamNamesArray = [];
+  for(var i = 0; i < gameInfo.length; i++){
+    var home = data[i].home_team;
+    var away = data[i].away_team;
+    debugger;
+    teamNamesArray.push(home);
+    teamNamesArray.push(away);
+  }
+  for(var i = 0; i < teamNamesArray.length; i++){
+    for(var x = 0; x < i; x++){
+      if(teamNamesArray[i] === teamNamesArray[x]){
+        teamNamesArray.splice(i, 1);
+      }
+    }
+  }
+  return teamNamesArray;
+}
+
+function addWinsAndLosses(gameInfo){
+  for(var i = 0; i < gameInfo.length; i++){
+    if(data[i].home_score < data[i].away_score){
+      //add win to home team
+      //add loss to away team
+    } else {
+      //add win to away team
+      //add loss to home team
+    }
+  }
+}
+function ranking(team){
+  var
+}
+addTeamNames(gameInfo);
+addWinsAndLosses(gameInfo);
+
+  // YOUR CODE HERE
+</script>
+</body>
+</html>
